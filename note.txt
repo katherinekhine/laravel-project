@@ -1,0 +1,5 @@
+php artisan make:factory ArticleFactory
+php artisan db:seed
+
+php artisan make:model Category -mf
+php artisan migrate:fresh --seed
