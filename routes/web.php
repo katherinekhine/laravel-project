@@ -8,7 +8,7 @@ Route::get('/', function () {
 });
 
 Route::get('/articles', function () {
-    return view('welcome', [
+    return view('article.index', [
         'articles' => Article::all(),
         'latest' => Article::orderByDesc('id')->first()
     ]);
