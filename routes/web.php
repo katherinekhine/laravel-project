@@ -9,6 +9,7 @@ Route::get('/', function () {
 
 Route::get('/articles', function () {
     return view('welcome', [
-        'articles' => Article::all()
+        'articles' => Article::all(),
+        'latest' => Article::orderByDesc('id')->first()
     ]);
 });

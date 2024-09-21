@@ -179,26 +179,13 @@
                         <div class="col-lg-4">
 
                             <div class="post-entry lg">
-                                <a href="blog-details.html"><img src="assets/img/post-landscape-1.jpg" alt=""
+                                <a href="blog-details.html"><img src="{{ $latest->photo }}" alt=""
                                         class="img-fluid"></a>
-                                <div class="post-meta"><span class="date">Culture</span> <span
-                                        class="mx-1">•</span> <span>Jul 5th '22</span></div>
-                                <h2><a href="blog-details.html">11 Work From Home Part-Time Jobs You Can Do Now</a>
+                                <div class="post-meta"><span class="date">{{ $latest->category_id }}</span> <span
+                                        class="mx-1">•</span> <span>{{ $latest->created_at }}</span></div>
+                                <h2><a href="blog-details.html">{{ $latest->title }}</a>
                                 </h2>
-                                <p class="mb-4 d-block">Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                                    Vero temporibus repudiandae, inventore pariatur numquam cumque possimus
-                                    exercitationem? Nihil tempore odit ab minus eveniet praesentium, similique
-                                    blanditiis molestiae ut saepe perspiciatis officia nemo, eos quae cumque.
-                                    Accusamus fugiat architecto rerum animi atque eveniet, quo, praesentium
-                                    dignissimos</p>
-
-                                <div class="d-flex align-items-center author">
-                                    <div class="photo"><img src="assets/img/person-1.jpg" alt=""
-                                            class="img-fluid"></div>
-                                    <div class="name">
-                                        <h3 class="m-0 p-0">Cameron Williamson</h3>
-                                    </div>
-                                </div>
+                                <p class="mb-4 d-block">{{ $latest->body }}</p>
                             </div>
 
                         </div>
