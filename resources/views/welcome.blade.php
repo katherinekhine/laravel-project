@@ -205,31 +205,21 @@
 
                         <div class="col-lg-8">
                             <div class="row g-5">
-                                <div class="col-lg-4 border-start custom-border">
-                                    <div class="post-entry">
-                                        <a href="blog-details.html"><img src="assets/img/post-landscape-2.jpg"
-                                                alt="" class="img-fluid"></a>
-                                        <div class="post-meta"><span class="date">Sport</span> <span
-                                                class="mx-1">•</span> <span>Jul 5th '22</span></div>
-                                        <h2><a href="blog-details.html">Let’s Get Back to Work, New York</a></h2>
+                                {{-- Article Begin --}}
+                                @foreach ($articles as $article)
+                                    <div class="col-lg-4 border-start custom-border">
+                                        <div class="post-entry">
+                                            <a href="blog-details.html"><img src="assets/img/post-landscape-2.jpg"
+                                                    alt="" class="img-fluid"></a>
+                                            <div class="post-meta">
+                                                <span class="date">{{ $article->category_id }}</span> <span
+                                                    class="mx-1">•</span> <span>{{ $article->create_at }}</span>
+                                            </div>
+                                            <h2><a href="blog-details.html">{{ $article->title }}</a></h2>
+                                        </div>
                                     </div>
-                                    <div class="post-entry">
-                                        <a href="blog-details.html"><img src="assets/img/post-landscape-5.jpg"
-                                                alt="" class="img-fluid"></a>
-                                        <div class="post-meta"><span class="date">Food</span> <span
-                                                class="mx-1">•</span> <span>Jul 17th '22</span></div>
-                                        <h2><a href="blog-details.html">How to Avoid Distraction and Stay Focused
-                                                During Video Calls?</a></h2>
-                                    </div>
-                                    <div class="post-entry">
-                                        <a href="blog-details.html"><img src="assets/img/post-landscape-7.jpg"
-                                                alt="" class="img-fluid"></a>
-                                        <div class="post-meta"><span class="date">Design</span> <span
-                                                class="mx-1">•</span> <span>Mar 15th '22</span></div>
-                                        <h2><a href="blog-details.html">Why Craigslist Tampa Is One of The Most
-                                                Interesting Places On the Web?</a></h2>
-                                    </div>
-                                </div>
+                                @endforeach
+                                {{-- Article End --}}
                                 <div class="col-lg-4 border-start custom-border">
                                     <div class="post-entry">
                                         <a href="blog-details.html"><img src="assets/img/post-landscape-3.jpg"
@@ -397,7 +387,8 @@
                     <div class="col-md-3">
                         <div class="post-list border-bottom">
                             <div class="post-meta"><span class="date">Culture</span> <span class="mx-1">•</span>
-                                <span>Jul 5th '22</span></div>
+                                <span>Jul 5th '22</span>
+                            </div>
                             <h2 class="mb-2"><a href="blog-details.html">How to Avoid Distraction and Stay
                                     Focused During Video Calls?</a></h2>
                             <span class="author mb-3 d-block">Jenny Wilson</span>
@@ -405,7 +396,8 @@
 
                         <div class="post-list border-bottom">
                             <div class="post-meta"><span class="date">Culture</span> <span class="mx-1">•</span>
-                                <span>Jul 5th '22</span></div>
+                                <span>Jul 5th '22</span>
+                            </div>
                             <h2 class="mb-2"><a href="blog-details.html">17 Pictures of Medium Length Hair in
                                     Layers That Will Inspire Your New Haircut</a></h2>
                             <span class="author mb-3 d-block">Jenny Wilson</span>
@@ -413,7 +405,8 @@
 
                         <div class="post-list border-bottom">
                             <div class="post-meta"><span class="date">Culture</span> <span class="mx-1">•</span>
-                                <span>Jul 5th '22</span></div>
+                                <span>Jul 5th '22</span>
+                            </div>
                             <h2 class="mb-2"><a href="blog-details.html">9 Half-up/half-down Hairstyles for Long
                                     and Medium Hair</a></h2>
                             <span class="author mb-3 d-block">Jenny Wilson</span>
@@ -421,7 +414,8 @@
 
                         <div class="post-list border-bottom">
                             <div class="post-meta"><span class="date">Culture</span> <span class="mx-1">•</span>
-                                <span>Jul 5th '22</span></div>
+                                <span>Jul 5th '22</span>
+                            </div>
                             <h2 class="mb-2"><a href="blog-details.html">Life Insurance And Pregnancy: A Working
                                     Mom’s Guide</a></h2>
                             <span class="author mb-3 d-block">Jenny Wilson</span>
@@ -429,7 +423,8 @@
 
                         <div class="post-list border-bottom">
                             <div class="post-meta"><span class="date">Culture</span> <span class="mx-1">•</span>
-                                <span>Jul 5th '22</span></div>
+                                <span>Jul 5th '22</span>
+                            </div>
                             <h2 class="mb-2"><a href="blog-details.html">The Best Homemade Masks for Face (keep
                                     the Pimples Away)</a></h2>
                             <span class="author mb-3 d-block">Jenny Wilson</span>
@@ -437,7 +432,8 @@
 
                         <div class="post-list border-bottom">
                             <div class="post-meta"><span class="date">Culture</span> <span class="mx-1">•</span>
-                                <span>Jul 5th '22</span></div>
+                                <span>Jul 5th '22</span>
+                            </div>
                             <h2 class="mb-2"><a href="blog-details.html">10 Life-Changing Hacks Every Working
                                     Mom Should Know</a></h2>
                             <span class="author mb-3 d-block">Jenny Wilson</span>
@@ -530,7 +526,8 @@
                     <div class="col-md-3">
                         <div class="post-list border-bottom">
                             <div class="post-meta"><span class="date">Business</span> <span class="mx-1">•</span>
-                                <span>Jul 5th '22</span></div>
+                                <span>Jul 5th '22</span>
+                            </div>
                             <h2 class="mb-2"><a href="blog-details.html">How to Avoid Distraction and Stay
                                     Focused During Video Calls?</a></h2>
                             <span class="author mb-3 d-block">Jenny Wilson</span>
@@ -538,7 +535,8 @@
 
                         <div class="post-list border-bottom">
                             <div class="post-meta"><span class="date">Business</span> <span class="mx-1">•</span>
-                                <span>Jul 5th '22</span></div>
+                                <span>Jul 5th '22</span>
+                            </div>
                             <h2 class="mb-2"><a href="blog-details.html">17 Pictures of Medium Length Hair in
                                     Layers That Will Inspire Your New Haircut</a></h2>
                             <span class="author mb-3 d-block">Jenny Wilson</span>
@@ -546,7 +544,8 @@
 
                         <div class="post-list border-bottom">
                             <div class="post-meta"><span class="date">Business</span> <span class="mx-1">•</span>
-                                <span>Jul 5th '22</span></div>
+                                <span>Jul 5th '22</span>
+                            </div>
                             <h2 class="mb-2"><a href="blog-details.html">9 Half-up/half-down Hairstyles for Long
                                     and Medium Hair</a></h2>
                             <span class="author mb-3 d-block">Jenny Wilson</span>
@@ -554,7 +553,8 @@
 
                         <div class="post-list border-bottom">
                             <div class="post-meta"><span class="date">Business</span> <span class="mx-1">•</span>
-                                <span>Jul 5th '22</span></div>
+                                <span>Jul 5th '22</span>
+                            </div>
                             <h2 class="mb-2"><a href="blog-details.html">Life Insurance And Pregnancy: A Working
                                     Mom’s Guide</a></h2>
                             <span class="author mb-3 d-block">Jenny Wilson</span>
@@ -562,7 +562,8 @@
 
                         <div class="post-list border-bottom">
                             <div class="post-meta"><span class="date">Business</span> <span class="mx-1">•</span>
-                                <span>Jul 5th '22</span></div>
+                                <span>Jul 5th '22</span>
+                            </div>
                             <h2 class="mb-2"><a href="blog-details.html">The Best Homemade Masks for Face (keep
                                     the Pimples Away)</a></h2>
                             <span class="author mb-3 d-block">Jenny Wilson</span>
@@ -570,7 +571,8 @@
 
                         <div class="post-list border-bottom">
                             <div class="post-meta"><span class="date">Business</span> <span class="mx-1">•</span>
-                                <span>Jul 5th '22</span></div>
+                                <span>Jul 5th '22</span>
+                            </div>
                             <h2 class="mb-2"><a href="blog-details.html">10 Life-Changing Hacks Every Working
                                     Mom Should Know</a></h2>
                             <span class="author mb-3 d-block">Jenny Wilson</span>
