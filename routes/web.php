@@ -13,3 +13,10 @@ Route::get('/articles', function () {
         'latest' => Article::orderByDesc('id')->first()
     ]);
 });
+
+
+Route::get('/articles/{article}', function (Article $article) {
+    return view("article.show", [
+        'article' => $article
+    ]);
+});
