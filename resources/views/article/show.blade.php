@@ -38,7 +38,7 @@
                                 <div class="meta-top">
                                     <ul>
                                         <li class="d-flex align-items-center">
-                                            <i class="bi bi-clock"></i> 
+                                            <i class="bi bi-clock"></i>
                                             <a href="blog-details.html">
                                                 <time datetime="2020-01-01">{{ $article->created_at }}</time>
                                             </a>
@@ -56,7 +56,7 @@
                                 <div class="meta-bottom">
                                     <i class="bi bi-folder"></i>
                                     <ul class="cats">
-                                        <li><a href="#">{{ $article->category_id }}</a></li>
+                                        <li><a href="#">{{ $article->category->title }}</a></li>
                                     </ul>
                                 </div><!-- End meta bottom -->
 
@@ -65,7 +65,7 @@
                         </div>
                     </section><!-- /Blog Details Section -->
 
-                   
+
 
                 </div>
 

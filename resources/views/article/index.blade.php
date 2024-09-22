@@ -28,8 +28,8 @@
                             @foreach ($articles as $article)
                                 <div class="col-lg-4 border-start custom-border">
                                     <div class="post-entry">
-                                        <a href="blog-details.html"><img src="assets/img/post-landscape-2.jpg"
-                                                alt="" class="img-fluid"></a>
+                                        <a href="{{ route('article.show', ['article' => $article]) }}"><img
+                                                src="assets/img/post-landscape-2.jpg" alt="" class="img-fluid"></a>
                                         <div class="post-meta">
                                             <span class="date">{{ $article->category_id }}</span> <span
                                                 class="mx-1">•</span> <span>{{ $article->create_at }}</span>

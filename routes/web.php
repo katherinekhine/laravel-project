@@ -1,6 +1,8 @@
 <?php
 
+use App\Http\Controllers\ArticleController;
 use App\Models\Article;
+use App\Models\Category;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -14,9 +16,9 @@ Route::get('/articles', function () {
     ]);
 });
 
-
-Route::get('/articles/{article}', function (Article $article) {
-    return view("article.show", [
-        'article' => $article
-    ]);
+Route::get('/about', function () {
+    return view('about');
 });
+
+Route::get('/articles', [ArticleController::class, 'index'])->name('article.index');
+Route::get('/articles/{article', [ArticleController::class, 'show'])->name('article.show');
