@@ -45,8 +45,9 @@
 
             <nav id="navmenu" class="navmenu">
                 <ul>
-                    <li><a href="index.html" class="active">Home</a></li>
-                    <li><a href="about.html">About</a></li>
+                    <li><a href="{{ route('article.create') }}">Create</a></li>
+                    <li><a href="/articles" class="active">Home</a></li>
+                    <li><a href="/about">About</a></li>
                     <li><a href="single-post.html">Single Post</a></li>
                     <li class="dropdown"><a href="#"><span>Categories</span> <i
                                 class="bi bi-chevron-down toggle-dropdown"></i></a>

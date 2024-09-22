@@ -20,5 +20,11 @@ Route::get('/about', function () {
     return view('about');
 });
 
+Route::get('/contact', function () {
+    return view('contact');
+});
+
 Route::get('/articles', [ArticleController::class, 'index'])->name('article.index');
+Route::post('/articles', [ArticleController::class, 'store'])->name('article.store');
 Route::get('/articles/{article', [ArticleController::class, 'show'])->name('article.show');
+Route::get('/articles/create', [ArticleController::class, 'create'])->name('article.create');
