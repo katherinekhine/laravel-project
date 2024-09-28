@@ -3,3 +3,8 @@ php artisan db:seed
 
 php artisan make:model Category -mf
 php artisan migrate:fresh --seed
+
+Sep 21
+php artisan serve
+npm install && npm run dev
+web.php
