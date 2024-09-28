@@ -70,7 +70,17 @@ class ArticleController extends Controller
      */
     public function update(Request $request, Article $article)
     {
-        //
+        $validatedData = $request->validate([
+            'title' => 'required',
+            'body' => 'required',
+            'category_id' => 'required',
+        ]);
+        if ($request->hasFile('photo')) {
+            $photo_path = $request->photo->store('image');
+            $validatedData['photo'] = $photo_path;
+        }
+        $article->update($validatedData);
+        return redirect(route('articles.show', ['article' => $article]));
     }
 
     /**

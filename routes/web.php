@@ -9,11 +9,11 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get("/about", function() {
+Route::get("/about", function () {
     return view("about");
 });
 
-Route::get("/contact", function() {
+Route::get("/contact", function () {
     return view("contact");
 });
 
@@ -21,7 +21,5 @@ Route::get('/articles', [ArticleController::class, 'index'])->name('articles.ind
 Route::post('/articles', [ArticleController::class, 'store'])->name('articles.store');
 Route::get('/articles/create', [ArticleController::class, 'create'])->name('articles.create');
 Route::get('/articles/{article}', [ArticleController::class, 'show'])->name('articles.show');
-
-
-
-
+Route::get('/articles/edit/{article}', [ArticleController::class, 'edit'])->name('articles.edit');
+Route::put('/articles/edit/{article}', [ArticleController::class, 'update'])->name("articles.update");

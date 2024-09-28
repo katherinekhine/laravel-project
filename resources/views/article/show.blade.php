@@ -58,15 +58,20 @@
                                     <ul class="cats">
                                         <li><a href="#">{{ $article->category->title }}</a></li>
                                     </ul>
-                                </div><!-- End meta bottom -->
+                                </div>
+
+                                <div>
+                                    <a href="{{ route('articles.edit', ['article=>$article']) }}">Edit</a>
+                                    <a href="">Delete</a>
+                                </div>
+                                <!-- End meta bottom -->
 
                             </article>
 
                         </div>
-                    </section><!-- /Blog Details Section -->
+                    </section>
 
-
-
+                    <!-- /Blog Details Section -->
                 </div>
 
                 <div class="col-lg-4 sidebar">
