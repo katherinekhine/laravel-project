@@ -62,7 +62,12 @@
 
                                 <div>
                                     <a href="{{ route('articles.edit', ['article=>$article']) }}">Edit</a>
-                                    <a href="">Delete</a>
+                                    <form action="{{ route('articles.destroy', ['article => $article']) }}"method="post"
+                                        class="d-inline">
+                                        @csrf
+                                        @method('DELETE')
+                                        <input type="submit" value="Delete" class="bg-transparent border-0">
+                                    </form>
                                 </div>
                                 <!-- End meta bottom -->
 

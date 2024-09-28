@@ -23,3 +23,4 @@ Route::get('/articles/create', [ArticleController::class, 'create'])->name('arti
 Route::get('/articles/{article}', [ArticleController::class, 'show'])->name('articles.show');
 Route::get('/articles/edit/{article}', [ArticleController::class, 'edit'])->name('articles.edit');
 Route::put('/articles/edit/{article}', [ArticleController::class, 'update'])->name("articles.update");
+Route::delete('/articles/{article}', [ArticleController::class, 'destroy'])->name("articles.destroy");
