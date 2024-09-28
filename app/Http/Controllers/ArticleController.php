@@ -34,7 +34,16 @@ class ArticleController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $validatedData = $request->validate([
+            'title' => 'required',
+            'body' => 'required',
+            'photo' => 'required',
+            'category_id' => 'required',
+        ]);
+        $photo_path = $request->photo->store('image');
+        $validatedData['photo'] = $photo_path;
+        Article::create($validatedData);
+        return redirect()->route('articles.index');
     }
 
     /**

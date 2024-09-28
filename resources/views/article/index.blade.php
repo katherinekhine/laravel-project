@@ -120,7 +120,8 @@
                                 <div class="col-lg-4 border-start custom-border">
                                     <div class="post-entry">
                                         <a href="{{ route('articles.show', ['article' => $article]) }}">
-                                            <img src="assets/img/post-landscape-2.jpg" alt="" class="img-fluid">
+                                            <img src="{{ asset('storage/' . $article->photo) }}" alt=""
+                                                class="img-fluid">
                                         </a>
                                         <div class="post-meta">
                                             <span class="date">{{ $article->category_id }}</span>

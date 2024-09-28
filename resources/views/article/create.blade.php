@@ -2,7 +2,7 @@
 @section('content')
     <div class="container">
         <h1 class="text-center my-3">New Blog</h1>
-        <form action="{{ route('articles.store') }}" method="post" class="py-3">
+        <form action="{{ route('articles.store') }}" method="post" class="py-3" enctype="multipart/form-data">
             @csrf
             <div class="my-2">
                 <label for="title">Title:</label>
